@@ -1,0 +1,52 @@
+{% extends 'diary/base.html' %}
+
+{% block content %}
+    <div class="select2-container">
+    <h1 style="margin-left: 700px">New Post</h1>
+    <hr>
+    <div class="new_post">
+        <form method="POST" enctype="multipart/form-data" class="post-form">
+            {% csrf_token %}
+            <p class="bold">Автор</p>
+            <p class="another">{{ form.author }}</p>
+            <p class="bold">Зарядка сделана?</p>
+            <p class="another">{{ form.morning }}</p>
+            <p class="bold">Кровать сразу заправлена? </p>
+            <p class="another">{{ form.bed }}</p>
+            <p class="bold">Вещи на своих местах лежат? </p>
+            <p class="another">{{ form.arrange }}</p>
+            <p class="bold">Посуда чистая? </p>
+            <p class="another">{{ form.dishware }}</p>
+            <p class="bold">Опишите задачу дня: </p>
+            <p class="another">{{ form.aim }}</p>
+            <p class="bold">Выполнена? </p>
+            <p class="another">{{ form.done }}</p>
+            <p class="bold">Три места, где вы сегодня проявили инициативу. Если не получилось, напишите почему. </p>
+            <p class="another">{{ form.action }}</p>
+            <p class="bold">Три дела, которые вы сделали хорошо. Почему вы сделали хорошо? </p>
+            <p class="another">{{ form.good_things }}</p>
+            <p class="bold">Три дела, которые вы сделали плохо. Как можно было сделать хорошо? </p>
+            <p class="another">{{ form.bad_things }}</p>
+            <p class="bold">Какую новую вещь вы сегодня сделали или какую старую сделали по-новому? </p>
+            <p class="another">{{ form.new_thing }}</p>
+            <p class="bold">Удалось не заниматься работой после часа Х? </p>
+            <p class="another">{{ form.work_time }}</p>
+            <p class="bold">Физкультура сегодня была? </p>
+            <p class="another">{{ form.PE }}</p>
+            <p class="bold">Медитировали? </p>
+            <p class="another">{{ form.meditation }}</p>
+            <p class="bold">За что вы сегодня были благодарны? </p>
+            <p class="another">{{ form.thanks }}</p>
+            <p class="bold">Сколько денег отправили на благотворительность? </p>
+            <p class="another">{{ form.charity }}</p>
+            <p class="bold">Ловили себя на мысли, когда хотели сдаться? Что предприняли при этом? </p>
+            <p class="another">{{ form.strength }}</p>
+            <p class="bold">Составьте список тех дел, которые вам нужно выполнить завтра: </p>
+            <p class="another">{{ form.tomorrow }}</p>
+
+{#            {{ form.as_p }}#}
+            <button type="submit" class="btn btn-success">Save</button>
+        </form>
+    </div>
+    </div>
+{% endblock %}

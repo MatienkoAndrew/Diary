@@ -1,0 +1,27 @@
+{% load static %}
+{#{% load avatar_tags %}#}
+<html>
+<head>
+    <title>Diary</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/diary.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/diary.js' %}" defer></script>
+</head>
+<body>
+{% block new_year %}
+{% endblock %}
+    <div class="page-header">
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <h1><a href="/">Мой дневник</a></h1>
+    </div>
+
+    <div class="col-md-8">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
