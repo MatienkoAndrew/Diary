@@ -5,14 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm
 
 class DiaryForm(forms.ModelForm):
-	morning = forms.ChoiceField(choices=((1, ("Да")), (2, ("Нет"))))
-	bed = forms.ChoiceField(choices=((1, ("Да")), (2, ("Нет"))))
-	arrange = forms.ChoiceField(choices=((1, ("Да")), (2, ("Нет"))))
-	dishware = forms.ChoiceField(choices=((1, ("Да")), (2, ("Нет"))))
-	done = forms.ChoiceField(choices=((1, ("Да")), (2, ("Нет"))))
-	work_time = forms.ChoiceField(choices=((1, ("Да")), (2, ("Нет"))))
-	PE = forms.ChoiceField(choices=((1, ("Да")), (2, ("Нет"))))
-	meditation = forms.ChoiceField(choices=((1, ("Да")), (2, ("Нет"))))
+
 	class Meta:
 		model = Diary
 		fields = ('author', 'title', 'morning', 'bed', 'arrange', 'dishware', 'aim', 'done', 'action',

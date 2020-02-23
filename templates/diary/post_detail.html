@@ -7,8 +7,23 @@
             </div>
             <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         <h1>{{ post.title }}</h1>
-        <h4>Автор: {{ post.author }}</h4>
-        <p>{{ post.text|linebreaksbr }}</p>
-        <h5> Цена: {{ post.price }} рублей</h5>
+     <h4><u><b>Автор:</b> </u><br>{{ post.author }}</h4>
+             <h4><b>Зарядка сделана?</b> <br/><p style="margin-left: 30px"> {{ post.morning }}</p></h4>
+             <h4><b>Кровать заправлена?</b> <br> {{ post.bed }}</h4>
+             <h4><b>Вещи на своих местах лежат?</b> <br> {{ post.arrange }}</h4>
+             <h4><b>Посуда чистая?</b> <br> {{ post.dishware }}</h4>
+             <h4><b>Задача дня:</b> <br/>{{ post.aim }} </h4>
+             <h4><b>Выполнена?</b> <br> {{ post.done }}</h4>
+             <h4><b>Три места, где проявил инициативу:</b> <br/>{{ post.action }} </h4>
+             <h4><b>Три хороших дела:</b> <br/>{{ post.good_things }}</h4>
+             <h4><b>Три плохих дела:</b> <br/>{{ post.bad_things }}</h4>
+             <h4><b>Какую новую вещь сделал?</b> <br>{{ post.new_thing }}</h4>
+             <h4><b>Удалось не заниматься работой после часа X?</b> <br> {{ post.work_time }}</h4>
+             <h4><b>Физкультура сегодня была?</b> <br/> {{ post.PE }}</h4>
+             <h4><b>Медитировали?</b> <br/> {{ post.meditation }}</h4>
+             <h4><b>За что ты благодарен сегодня?</b> <br/>{{ post.thanks }}</h4>
+             <h4><b>Сколько отдал на благотварительность?</b> <br/>{{ post.charity }}</h4>
+             <h4><b>Ловил себя на мысли, когда хотел сдаться? Что предпринял при этом?</b> <br>{{ post.strength }}</h4>
+             <h4><b>Список дел на завтра:</b> <br/>{{ post.tomorrow }}</h4>
     </div>
 {% endblock %}
